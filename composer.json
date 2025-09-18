@@ -1,9 +1,9 @@
 {
-    "name": "ecflima/proto",
+    "name": "ecflima/webpro",
     "type": "library",
     "description": "Library for PHP",
     "keywords": ["web"],
-    "homepage": "https://github.com/ecflima/proto",
+    "homepage": "https://github.com/ecflima/webpro",
     "license": "MIT",
     "authors": [
         {
