@@ -1,0 +1,24 @@
+{
+    "name": "ecflima/proto",
+    "type": "library",
+    "description": "Library for PHP",
+    "keywords": ["web"],
+    "homepage": "https://github.com/ecflima/proto",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emerson Lima",
+            "email": "ecorreiaflima@gmail.com",
+            "homepage": "https://github.com/ecflima",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.0"
+    },
+    "autoload": {
+        "psr-0": {
+            "Ecfl": "src"
+        }
+    }
+}
