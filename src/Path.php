@@ -12,6 +12,14 @@ class Path {
         $this->methods = is_string($method) ? [$method] : $methods;
     }
 
+    public function getPath() {
+        return $this->path;
+    }
+
+    public function getMethods() {
+        return $this->methods;
+    }
+
     public static function getFunctions() {        
         $r = [];
         foreach (get_defined_functions(true)["user"] as $f) {
