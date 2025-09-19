@@ -54,6 +54,7 @@ class App {
 		        } catch (\Throwable $t) {
 		        	http_response_code(500);
 		        	echo "Internal Server Error";
+		        	echo $t;
 		        }
 		        break;
 		}
