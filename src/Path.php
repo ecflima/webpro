@@ -14,7 +14,7 @@ class Path {
         $r = [];
         foreach (get_defined_functions(true) as $f) {
             $rf = new ReflectionFunction($f);
-            $attrs = $rf->getAttributes()
+            $attrs = $rf->getAttributes();
             foreach ($attrs as $attr) {
                 if ($attr->getName() == Path::class) {
                     $r[$f] = $attr;
