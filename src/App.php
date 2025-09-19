@@ -51,7 +51,7 @@ class App {
 		        // ... call $handler with $vars
 		        try {
 		        	call_user_func_array($handler, $vars);
-		        } catch (Throwable $t) {
+		        } catch (\Throwable $t) {
 		        	http_response_code(500);
 		        	echo "Internal Server Error";
 		        }
