@@ -1,6 +1,6 @@
 <?php
 
-namespace Ecfl\Webpro\Web;
+namespace Ecfl\Webpro;
 
 #[Attribute]
 class Middleware {
