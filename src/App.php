@@ -50,7 +50,7 @@ class App {
 		        $vars = $routeInfo[2];
 		        // ... call $handler with $vars
 		        try {
-		        	call_user_func_array($handler, $vars);
+		        	call_user_func_array($handler, [$context]);
 		        } catch (\Throwable $t) {
 		        	http_response_code(500);
 		        	echo "Internal Server Error";
