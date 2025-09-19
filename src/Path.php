@@ -13,7 +13,7 @@ class Path {
     public static function getFunctions() {        
         $r = [];
         foreach (get_defined_functions(true) as $f) {
-            $rf = new ReflectionFunction($f);
+            $rf = new \ReflectionFunction($f);
             $attrs = $rf->getAttributes();
             foreach ($attrs as $attr) {
                 if ($attr->getName() == Path::class) {
