@@ -10,9 +10,9 @@ class App {
 		//TODO: $filter path handlers
 		//TODO: dispatch
 		//TODO: response
-	}
+	}	
 
-	public function dump() {
+	public function dump() {		
 		//TODO: Dump routes
 		//TODO: Dump middlewares
 	}
