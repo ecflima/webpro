@@ -9,7 +9,7 @@ class Path {
 
     public function __construct(string $path, string | array $method = ['GET', 'HEAD', 'POST', 'PUT', 'DELETE']) {
         $this->path = $path;
-        $this->methods = is_string($method) ? [$method] : $methods;
+        $this->methods = is_string($method) ? [$method] : $method;
     }
 
     public function getPath() {
