@@ -12,7 +12,7 @@ class Path {
 
     public static function getFunctions() {        
         $r = [];
-        foreach (get_defined_functions(true) as $f) {
+        foreach (get_defined_functions(true)["user"] as $f) {
             $rf = new \ReflectionFunction($f);
             $attrs = $rf->getAttributes();
             foreach ($attrs as $attr) {
