@@ -5,9 +5,11 @@ namespace Ecfl\Webpro;
 #[\Attribute(\Attribute::TARGET_METHOD | \Attribute::TARGET_FUNCTION | \Attribute::TARGET_CLASS)]
 class Path {
 	private $path;
+    private $methods;
 
-    public function __construct($path) {
+    public function __construct(string $path, string | array $method = ['GET', 'HEAD', 'POST', 'PUT', 'DELETE']) {
         $this->path = $path;
+        $this->methods = is_string($method) ? [$method] : $methods;
     }
 
     public static function getFunctions() {        
