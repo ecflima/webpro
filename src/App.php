@@ -11,7 +11,7 @@ class App {
 
 	public function handleRequest($context = null) {
 		// setup router
-		$this->dispatcher = FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {	
+		$this->dispatcher = \FastRoute\simpleDispatcher(function(FastRoute\RouteCollector $r) {	
 			foreach (Path::getFunctions() as $h => $ra) {
 				$attr = $ra->newInstance();	
 				$p = $attr->getPath();
