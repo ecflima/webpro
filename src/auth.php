@@ -14,6 +14,6 @@ function auth_check($login_url='/auth/login') {
 
 function auth_logout($redirect_url=null) {
 	//TODO: Entrypoint
-	unset($_SESSION['u']);
+	unset($_SESSION['u']);	
 	http_redirect($redirect_url);
 }
