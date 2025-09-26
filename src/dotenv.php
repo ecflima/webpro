@@ -5,7 +5,7 @@ function load_dotenv($filename=".env") {
 	if (!file_exists($filename)) {
 		//echo "file not exists";
 	}
-	if (($linhas = file(__DIR__.DIRECTORY_SEPARATOR.$filename)) === false) {
+	if (($linhas = file($filename)) === false) {
 		//echo "no content";
 		return;
 	}
