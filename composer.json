@@ -19,9 +19,16 @@
         "nyholm/psr7": "^1.8"
     },
     "autoload": {
-        "files": ["src/functions.php"],
+        "files": [
+            "src/auth.php",
+            "src/csrf.php",
+            "src/csv.php",
+            "src/db_pdo_single.php",
+            "src/dotenv.php",
+            "src/http.php"
+        ],
         "psr-4": {
-            "Ecfl\\Webpro\\": "src"
+            "Ecfl\\Webpro\\": "src/psr4"
         }
     }
 }
