@@ -38,7 +38,7 @@ class Cas {
 	}
 
 	public function parseUserFromXMLResponse($response) {	
-		$xml = new DOMDocument();
+		$xml = new \DOMDocument();
 		$xml->loadXML($response);
 		$service_response = $xml->firstElementChild;
 		$a = $service_response->firstElementChild;
