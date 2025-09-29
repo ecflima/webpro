@@ -32,7 +32,7 @@ class Cas {
 	public function validateServiceTicket($ticket) {
 		$validation_url = $this->casServerUrl.'/serviceValidate?'.http_build_query([
 			"ticket" => $ticket,
-			"service" => $service_url		
+			"service" => $this->callbackUrl
 		]);
 		return $this->parseUserFromXMLResponse(http_request($validation_url));
 	}
