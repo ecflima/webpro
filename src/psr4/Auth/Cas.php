@@ -48,6 +48,9 @@ class Cas {
 		case "cas:authenticationSuccess":
 			$u = [];			
 			foreach ($a->childNodes as $n) {
+				if ($n->nodeType !== XML_ELEMENT_NODE) {
+					continue;
+				}
 				switch ($n->tagName) {
 					case "cas:user": 
 						$u['user'] = $n->textContent; 
