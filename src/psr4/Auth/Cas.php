@@ -8,8 +8,8 @@ class Cas {
 	private $callbackUrl;
 
 	public function __construct($casServerUrl = null, $callbackUrl = null) {
-		$this->casServerUrl = $casServerUrl !== null ? $casServerUrl : $_ENV['CAS_URL'];
-		$this->callbackUrl = $callbackUrl !== null ? $callbackUrl : $_ENV['APP_URL'].'/auth/cas';
+		$this->casServerUrl = $casServerUrl !== null ? $casServerUrl : getenv('CAS_URL');
+		$this->callbackUrl = $callbackUrl !== null ? $callbackUrl : getenv('APP_URL').'/auth/cas';
 	}
 
 	public function login($renew = false) {	

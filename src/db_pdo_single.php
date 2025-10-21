@@ -3,11 +3,11 @@
 function db_open() {
 	static $connection = null;
 	if ($connection === null) {
-		$dbdriver = $_ENV['DB_DRIVER'];
-		$dbhost = $_ENV['DB_HOST'];
-		$dbname = $_ENV['DB_NAME'];
-		$dbuser = $_ENV['DB_USER'];
-		$dbpass = $_ENV['DB_PASSWORD'];		
+		$dbdriver = getenv('DB_DRIVER');
+		$dbhost = getenv('DB_HOST');
+		$dbname = getenv('DB_NAME');
+		$dbuser = getenv('DB_USER');
+		$dbpass = getenv('DB_PASSWORD');
 		$connection = new \PDO("$dbdriver:host=$dbhost;dbname=$dbname", $dbuser, $dbpass, [
 			\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
 		]);

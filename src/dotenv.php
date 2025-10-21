@@ -11,10 +11,14 @@ function load_dotenv($filename=".env") {
 	}
 	foreach ($linhas as $l) {
 		$aux = explode("=", $l);
-		$_ENV[$aux[0]]=trim($aux[1]);
 		putenv($l);
 	}
 }
 
-
-
+function require_env($name) {
+	$v = getenv($name);
+	if ($v === false) {
+		throw new \Exception("Missing required environment variable \"$name\"!");
+	}
+	return $v;
+}
