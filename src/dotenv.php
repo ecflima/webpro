@@ -16,9 +16,9 @@ function load_dotenv($filename=".env") {
 }
 
 function require_env($name) {
-	$v = getenv($name);
-	if ($v === false) {
-		throw new \Exception("Missing required environment variable \"$name\"!");
+	$value = getenv($name);
+	if ($value === false) {
+		throw new \Exception("Environment variable \"$name\" not defined!");
 	}
-	return $v;
+	return trim($value);
 }
