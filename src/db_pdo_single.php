@@ -3,12 +3,13 @@
 function db_open() {
 	static $connection = null;
 	if ($connection === null) {
-		$dbdriver = getenv('DB_DRIVER');
-		$dbhost = getenv('DB_HOST');
-		$dbname = getenv('DB_NAME');
-		$dbuser = getenv('DB_USER');
-		$dbpass = getenv('DB_PASSWORD');
-		$connection = new \PDO("$dbdriver:host=$dbhost;dbname=$dbname", $dbuser, $dbpass, [
+		$dbdriver = require_env('DB_DRIVER');
+		$dbhost = require_env('DB_HOST');
+		$dbname = require_env('DB_NAME');
+		$dbuser = require_env('DB_USER');
+		$dbpass = require_env('DB_PASSWORD');
+		$pdn = "$dbdriver:host=$dbhost;dbname=$dbname";
+		$connection = new \PDO($pdn, $dbuser, $dbpass, [
 			\PDO::ATTR_ERRMODE => \PDO::ERRMODE_EXCEPTION
 		]);
 		if ($dbdriver === "pgsql") {
